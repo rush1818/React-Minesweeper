@@ -21,20 +21,23 @@ class Game extends React.Component {
 
   restartGame(e){
     let b = new Minesweeper.Board(10, 10);
+    document.getElementById("modal").className="modal";
     this.setState({board: b});
   }
 
   render(){
     let content = "";
-    if (this.state.board.lost() || this.state.board.won())
+    if (this.state.board.lost() || this.state.board.won()){
+    document.getElementById("modal").className="modal is-active";
+    document.getElementById("restartGame").addEventListener("click", this.restartGame.bind(this))
     content = (<div>
-      <Board board={this.state.board}
-        updateGame={this.updateGame}
-        gameOver={this.state.board.lost()}
-        gameWon={this.state.board.won()}/>
-      <h2>Game Over</h2>
-      <h3 onClick={this.restartGame.bind(this)}><a href="#">Play Again?</a></h3>
-    </div>);
+          <Board board={this.state.board}
+            updateGame={this.updateGame}
+            gameOver={this.state.board.lost()}
+            gameWon={this.state.board.won()}/>
+
+      </div>);
+    }
     else {
       content = (<div>
         <Board board={this.state.board}
@@ -51,3 +54,7 @@ class Game extends React.Component {
 
 
 export default Game;
+// <div className="modal is-active">
+//   <h2>Game Over</h2>
+//   <h3 onClick={this.restartGame.bind(this)}><a href="#">Play Again?</a></h3>
+// </div>
