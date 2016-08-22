@@ -1,0 +1,30 @@
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tile{
+  display: inline-block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: grey;
+  border: 1px solid black;
+}
+
+.bombed {
+  background: red;
+}
+
+.flagged {
+  background: blue;
+}
+
+.explored {
+  background: lightgrey;
+}
+
+.tile:hover{
+  background: yellow;
+}
