@@ -10,26 +10,33 @@
   width: 40px;
   height: 40px;
   background: grey;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
+  border-style: outset;
 }
 
 .bombed {
   background: red;
+  border-style: inset;
 }
 
 .flagged {
   background: blue;
+  border-style: inset;
 }
 
 .explored {
   background: lightgrey;
+  border-style: inset;
 }
 
 .tile:hover{
   background: yellow;
 }
 
-
+.grid {
+  margin-left: 20%;
+  margin-top: 20%;
+}
 
 .modal {
   display: none;
