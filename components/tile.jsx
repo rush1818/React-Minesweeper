@@ -38,6 +38,7 @@ class Tile extends React.Component {
       tileClass = "tile explored";
     } else if (this.state.flagged){
       tileClass = "tile flagged";
+      text = '';
     } else{
       text = "";
     }
@@ -50,7 +51,7 @@ class Tile extends React.Component {
     }
 
     return (
-      <div onClick={this.props.gameOver || this.props.gameWon ? "" : this.handleClick.bind(this)} className={tileClass}>{text}</div>
+      <div onClick={this.props.gameOver || this.props.gameWon ? "" : this.handleClick.bind(this)} className={tileClass}><span className='tile-value'>{text}</span></div>
     );
   }
 }

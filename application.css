@@ -4,6 +4,11 @@
   display: block;
 }
 
+.instructions {
+  text-align: center;
+  margin-right: 120px;
+}
+
 .tile{
   display: inline-block;
   float: left;
@@ -12,6 +17,7 @@
   background: grey;
   /*border: 1px solid black;*/
   border-style: outset;
+  text-align: center;
 }
 
 .bombed {
@@ -31,11 +37,20 @@
 
 .tile:hover{
   background: yellow;
+  cursor: default;
+}
+
+.tile-value{
+  font-size: 30px;
+}
+
+.full-game{
+  display: flex;
+  justify-content: center;
 }
 
 .grid {
-  margin-left: 20%;
-  margin-top: 20%;
+  min-width: 600px;
 }
 
 .modal {

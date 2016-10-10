@@ -7,22 +7,19 @@
     <script src="bundle.js" charset="utf-8"></script>
   </head>
   <body>
-    <div id="root">
-      Hello
+    <div class="instructions">
+      <h1>Minesweeper</h1>
+      <p>Click to explore a cell. Use option(alt) + click to flag a tile.</p>
     </div>
+    <div id="root"></div>
 
     <section id="modal" class="modal">
-
       <article class="modal-content">
-
         <span class="modal-close js-hide-modal"></span>
-
-        <h1>Game Over</h1>
-
+          <h1>Game Over</h1>
         <p id="restartGame"><a href="#">Restart Game</a></p>
       </article>
-
       <div class="modal-screen js-hide-modal"></div>
-  </section>
+    </section>
   </body>
 </html>
