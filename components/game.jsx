@@ -30,24 +30,20 @@ class Game extends React.Component {
     if (this.state.board.lost() || this.state.board.won()){
     document.getElementById("modal").className="modal is-active";
     document.getElementById("restartGame").addEventListener("click", this.restartGame.bind(this))
-    content = (<div>
+    content = (
           <Board board={this.state.board}
             updateGame={this.updateGame}
             gameOver={this.state.board.lost()}
-            gameWon={this.state.board.won()}/>
-
-      </div>);
+            gameWon={this.state.board.won()}/>);
     }
     else {
-      content = (<div className='full-game'>
-        <Board board={this.state.board}
+      content = (<Board board={this.state.board}
           updateGame={this.updateGame}
           gameOver={this.state.board.lost()}
-          gameWon={this.state.board.won()}/>
-      </div>);
+          gameWon={this.state.board.won()}/>);
     }
     return (
-      <div>{content}</div>
+      <div className='full-game'>{content}</div>
     );
   }
 }
